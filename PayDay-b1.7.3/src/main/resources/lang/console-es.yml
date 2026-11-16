@@ -1,0 +1,33 @@
+# Mensajes de consola de PayDay en español.
+prefix: '[PayDay]'
+type:
+  day: Día
+  noon: Mediodía
+  night: Noche
+  dawn: Amanecer
+  dusk: Atardecer
+  clear: Cielo despejado
+  rain: Lluvia
+  storm: Tormenta
+message:
+  no_console: '&cEste comando solo puede ejecutarlo un jugador.'
+  no_permission: '&cNo tienes permiso para usar este comando.'
+  not_enough_money: '&cNo tienes suficiente dinero. Necesitas: &6{cost}'
+  current_balance: '&cSaldo actual: &6{balance}'
+  payday_success: '&aHas pagado &6{cost}&a. Tiempo ajustado a día.'
+  purchase_balance: '&aSaldo restante: &6{balance}'
+  payweather_success: '&aHas pagado &6{cost}&a. Clima ajustado a despejado.'
+  reload: '&aConfiguración, idioma e historial SQLite de PayDay recargados por completo.'
+  usage_admin: '&cUso: /paydayadmin reload'
+log:
+  enabled: PayDay v{version} activado.
+  disabled: PayDay desactivado.
+  economy_missing: No se encontró iConomy. PayDay se ha desactivado.
+  database_missing: SQLite JDBC no está disponible. PayDay se ha desactivado.
+  price: 'Precio de {type}: {cost}'
+  payday_purchase: '{player} pagó {cost} para ajustar el tiempo a día.'
+  payweather_purchase: '{player} pagó {cost} para ajustar el clima a despejado.'
+  reload: '{player} recargó la configuración de PayDay.'
+  payment_failed: 'El pago de {cost} de {player} falló.'
+  time_purchase: '{player} pagó {cost} para ajustar la hora a {action}.'
+  weather_purchase: '{player} pagó {cost} para ajustar el clima a {action}.'

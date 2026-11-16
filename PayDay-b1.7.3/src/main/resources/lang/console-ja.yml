@@ -1,0 +1,33 @@
+# PayDay 日本語コンソールメッセージ。
+prefix: '[PayDay]'
+type:
+  day: 昼
+  noon: 正午
+  night: 夜
+  dawn: 夜明け
+  dusk: 夕暮れ
+  clear: 晴れ
+  rain: 雨
+  storm: 雷雨
+message:
+  no_console: '&cこのコマンドはプレイヤーのみ実行できます。'
+  no_permission: '&cこのコマンドを使用する権限がありません。'
+  not_enough_money: '&c所持金が足りません。必要額：&6{cost}'
+  current_balance: '&c現在の残高：&6{balance}'
+  payday_success: '&a&6{cost}&a を支払い、時間を昼に設定しました。'
+  purchase_balance: '&a残りの所持金：&6{balance}'
+  payweather_success: '&a&6{cost}&a を支払い、天候を晴れに設定しました。'
+  reload: '&aPayDay の設定、言語、SQLite 履歴を完全に再読み込みしました。'
+  usage_admin: '&c使用法：/paydayadmin reload'
+log:
+  enabled: PayDay v{version} を有効化しました。
+  disabled: PayDay を無効化しました。
+  economy_missing: iConomy が見つからないため、PayDay を無効化しました。
+  database_missing: SQLite JDBC を利用できないため、PayDay を無効化しました。
+  price: '{type} の価格：{cost}'
+  payday_purchase: '{player} が {cost} を支払い、時間を昼に設定しました。'
+  payweather_purchase: '{player} が {cost} を支払い、天候を晴れに設定しました。'
+  reload: '{player} が PayDay の設定を再読み込みしました。'
+  payment_failed: '{player} の {cost} の支払いに失敗しました。'
+  time_purchase: '{player} が {cost} を支払い、時間を {action} に設定しました。'
+  weather_purchase: '{player} が {cost} を支払い、天候を {action} に設定しました。'

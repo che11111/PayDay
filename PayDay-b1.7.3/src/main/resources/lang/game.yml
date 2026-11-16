@@ -1,0 +1,30 @@
+# Beta 1.7.3 in-game messages. Keep this file ASCII/English only.
+prefix: ''
+type:
+  day: Day
+  noon: Noon
+  night: Night
+  dawn: Dawn
+  dusk: Dusk
+  clear: Clear Weather
+  rain: Rain
+  storm: Thunderstorm
+message:
+  no_console: '&cThis command can only be executed by a player!'
+  no_permission: '&cYou don''t have permission to use this command!'
+  not_enough_money: '&cYou don''t have enough money! Need &6{cost}'
+  current_balance: '&cCurrent balance: &6{balance}'
+  payday_success: '&aYou paid &6{cost} &aand set the time to day!'
+  time_success: '&aYou paid &6{cost} &aand set the time to {action}!'
+  purchase_balance: '&aRemaining balance: &6{balance}'
+  payweather_success: '&aYou paid &6{cost} &aand set the weather to clear!'
+  weather_success: '&aYou paid &6{cost} &aand set the weather to {action}!'
+  time_broadcast: '&eBoss &6{player} &eused ''&6{command}&e'' to bring &6{action}&e for everyone!'
+  weather_broadcast: '&eBoss &6{player} &eused ''&6{command}&e'' to bring &6{action}&e for everyone!'
+  payment_failed: '&cPayment failed. No weather or time change was made.'
+  reload: '&aPayDay configuration, language and SQLite history reloaded!'
+  usage_admin: '&cUsage: /paydayadmin reload'
+  payday_broadcast: '&eBoss &6{player} &euse ''&6{command}&e'' brought day time for
+    everyone!'
+  payweather_broadcast: '&eBoss &6{player} &euse ''&6{command}&e'' brought clear weather
+    for everyone!'

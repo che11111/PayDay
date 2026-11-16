@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Visual Studio Code
+.vscode/
+
+# Maven build output
+**/target/
+**/pom.xml.versionsBackup
+**/dependency-reduced-pom.xml
+release.properties
+
+# Compiled Java output
+*.class
+*.jar.tmp
+hs_err_pid*
+replay_pid*
+
+# Logs and crash reports
+*.log
+logs/
+crash-reports/
+
+# Local test servers and runtime data
+run/
+server/
+servers/
+plugins/PayDay/
+**/plugins/PayDay/
+
+# PayDay runtime data
+history.db
+history.db-shm
+history.db-wal
+**/history.db
+**/history.db-shm
+**/history.db-wal
+**/history.yml
+**/history.yml.bak
+
+# Environment and local secrets
+.env
+.env.*
+*.local
+
+# Temporary files
+*.tmp
+*.temp
+*~

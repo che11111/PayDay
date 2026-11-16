@@ -1,0 +1,68 @@
+name: PayDay
+main: dev.che1s.payday.PayDayPlugin
+version: 1.0.0
+description: 付费设置时间/天气的插件
+author: che1s
+depend: [Vault]
+
+commands:
+  payday:
+    description: 付费设置白天
+    usage: /<command>
+  paynoon:
+    description: 付费设置正午
+    usage: /<command>
+  paynight:
+    description: 付费设置夜晚
+    usage: /<command>
+  paydawn:
+    description: 付费设置黎明
+    usage: /<command>
+  paydusk:
+    description: 付费设置落日
+    usage: /<command>
+  payweather:
+    description: 付费设置晴天
+    usage: /<command>
+  payrain:
+    description: 付费设置雨天
+    usage: /<command>
+  paystorm:
+    description: 付费设置雷暴天气
+    usage: /<command>
+  paydayadmin:
+    description: PayDay 管理命令
+    usage: /<command> reload
+
+permissions:
+  payday.use:
+    description: 使用全部购买功能
+    default: true
+    children:
+      payday.day: true
+      payday.noon: true
+      payday.night: true
+      payday.dawn: true
+      payday.dusk: true
+      payday.weather: true
+  payday.day:
+    description: 使用 /payday
+    default: true
+  payday.noon:
+    description: 使用 /paynoon
+    default: true
+  payday.night:
+    description: 使用 /paynight
+    default: true
+  payday.dawn:
+    description: 使用 /paydawn
+    default: true
+  payday.dusk:
+    description: 使用 /paydusk
+    default: true
+  payday.weather:
+    description: 使用 /payweather、/payrain 和 /paystorm
+    default: true
+  payday.reload:
+    description: 使用 /paydayadmin reload
+    default: op

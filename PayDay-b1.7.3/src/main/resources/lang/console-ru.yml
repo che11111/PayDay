@@ -1,0 +1,33 @@
+# Сообщения консоли PayDay на русском.
+prefix: '[PayDay]'
+type:
+  day: День
+  noon: Полдень
+  night: Ночь
+  dawn: Рассвет
+  dusk: Закат
+  clear: Ясная погода
+  rain: Дождь
+  storm: Гроза
+message:
+  no_console: '&cЭту команду может выполнить только игрок!'
+  no_permission: '&cУ вас нет прав для использования этой команды!'
+  not_enough_money: '&cНедостаточно денег. Требуется: &6{cost}'
+  current_balance: '&cТекущий баланс: &6{balance}'
+  payday_success: '&aОплачено &6{cost}&a. Время установлено на день.'
+  purchase_balance: '&aОставшийся баланс: &6{balance}'
+  payweather_success: '&aОплачено &6{cost}&a. Погода установлена на ясную.'
+  reload: '&aКонфигурация, язык и история SQLite PayDay полностью перезагружены.'
+  usage_admin: '&cИспользование: /paydayadmin reload'
+log:
+  enabled: PayDay v{version} включён.
+  disabled: PayDay отключён.
+  economy_missing: iConomy не найден. PayDay отключён.
+  database_missing: SQLite JDBC недоступен. PayDay отключён.
+  price: 'Цена для {type}: {cost}'
+  payday_purchase: '{player} заплатил {cost}, установив время на день.'
+  payweather_purchase: '{player} заплатил {cost}, установив ясную погоду.'
+  reload: '{player} перезагрузил конфигурацию PayDay.'
+  payment_failed: 'Не удалось списать {cost} у игрока {player}.'
+  time_purchase: '{player} заплатил {cost}, установив время на {action}.'
+  weather_purchase: '{player} заплатил {cost}, установив погоду на {action}.'

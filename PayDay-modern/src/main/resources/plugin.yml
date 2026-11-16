@@ -1,0 +1,85 @@
+name: PayDay
+main: dev.che1s.payday.PayDayPlugin
+version: 1.0.0
+api-version: '1.13'
+description: 付费设置天气/时间的插件 (Pay to set time and weather)
+author: che1s
+depend: [Vault]
+softdepend: [floodgate, PlaceholderAPI]
+folia-supported: true
+
+commands:
+  payday:
+    description: 购买白天
+    usage: /<command>
+  paynoon:
+    description: 购买正午
+    usage: /<command>
+  payweather:
+    description: 购买晴天
+    usage: /<command>
+  payrain:
+    description: 购买雨天
+    usage: /<command>
+  paystorm:
+    description: 购买雷暴天气
+    usage: /<command>
+  paynight:
+    description: 购买夜晚（午夜）
+    usage: /<command>
+  paydawn:
+    description: 购买黎明
+    usage: /<command>
+  paydusk:
+    description: 购买落日
+    usage: /<command>
+  paydayadmin:
+    description: PayDay 管理命令
+    usage: /<command> reload
+  pform:
+    description: 打开基岩版天气/时间购买表单
+    usage: /<command>
+    aliases: [paydayform]
+  paydaydialog:
+    description: 打开原生 Dialog 天气/时间购买页面
+    usage: /<command>
+    aliases: [pdialog]
+
+permissions:
+  payday.use:
+    description: 允许使用全部购买功能
+    default: true
+    children:
+      payday.day: true
+      payday.noon: true
+      payday.weather: true
+      payday.night: true
+      payday.dawn: true
+      payday.dusk: true
+  payday.day:
+    description: 购买白天
+    default: true
+  payday.noon:
+    description: 购买正午
+    default: true
+  payday.weather:
+    description: 购买晴天、雨天和雷暴天气
+    default: true
+  payday.night:
+    description: 购买夜晚（午夜）
+    default: true
+  payday.dawn:
+    description: 购买黎明
+    default: true
+  payday.dusk:
+    description: 购买落日
+    default: true
+  payday.dialog:
+    description: 打开 Paper Dialog 购买页面
+    default: true
+  payday.form:
+    description: 打开 Floodgate 基岩版购买表单
+    default: true
+  payday.reload:
+    description: 使用 /paydayadmin reload
+    default: op

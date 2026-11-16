@@ -1,0 +1,69 @@
+# PayDay configuration / PayDay 配置文件
+#
+# Commands / 可用指令:
+#   /payday              Day / 白天
+#   /paynoon             Noon / 正午
+#   /paynight            Night / 夜晚
+#   /paydawn             Dawn / 黎明
+#   /paydusk             Dusk / 落日
+#   /payweather          Clear weather / 晴天
+#   /payrain             Rain / 雨天
+#   /paystorm            Thunderstorm / 雷暴
+#   /paydayadmin reload  Full reload / 完整重载
+#   /pform               Bedrock form / 基岩版表单（别名 /paydayform）
+#   /paydaydialog        Paper Dialog / Paper 原生界面
+#
+# Color codes / 颜色代码:
+#   Legacy codes / 传统代码: &0-9 &a-f &k-o &r
+#   Hex color / 十六进制颜色: &#RRGGBB
+#   Example / 示例: &#FF5555&l[!]&r
+#
+# PlaceholderAPI:
+#   %payday_payday%     /payday uses / 使用次数
+#   %payday_paynoon%    /paynoon uses / 使用次数
+#   %payday_paynight%   /paynight uses / 使用次数
+#   %payday_paydawn%    /paydawn uses / 使用次数
+#   %payday_paydusk%    /paydusk uses / 使用次数
+#   %payday_payweather% /payweather uses / 使用次数
+#   %payday_payrain%    /payrain uses / 使用次数
+#   %payday_paystorm%   /paystorm uses / 使用次数
+
+# Global language / 全局语言:
+# Use auto or a complete .yml filename under lang/. / 填写 auto，或 lang/ 下的完整 .yml 文件名。
+# Built in / 内置: en.yml, zh_cn.yml, ja.yml, ko.yml, zh_tw.yml,
+#                  de.yml, fr.yml, es.yml, ru.yml
+# auto follows the server JVM language and country. / auto 根据服务器 JVM 语言和地区自动选择。
+# Unknown locales and invalid values fall back to en.yml. / 无法识别时回退到 en.yml。
+# Example / 示例: language: zh_cn.yml
+language: auto
+
+# Purchase prices / 购买价格
+costs:
+  # Time purchases / 时间购买
+  time:
+    day: 30     # Day / 白天
+    noon: 30    # Noon / 正午
+    night: 30   # Night / 夜晚
+    dawn: 30    # Dawn / 黎明
+    dusk: 30    # Dusk / 落日
+  # Weather purchases / 天气购买
+  weather:
+    clear: 30   # Clear / 晴天
+    rain: 30    # Rain / 雨天
+    storm: 30   # Thunderstorm / 雷暴
+
+# In-game time values / 游戏内时间值 (ticks)
+times:
+  day: 1000    # Day / 白天
+  noon: 6000   # Noon / 正午
+  night: 18000 # Night / 夜晚
+  dawn: 0      # Dawn / 黎明
+  dusk: 12000  # Dusk / 落日
+
+# Rain and thunder duration / 雨天和雷暴持续时间 (ticks)
+# 12000 ticks = about 10 minutes / 12000 ticks 约为 10 分钟
+weather_duration: 12000
+
+# Player messages / 玩家消息:
+# plugins/PayDay/lang/<language>.yml
+# Missing keys fall back to en.yml / 缺失键回退到 en.yml

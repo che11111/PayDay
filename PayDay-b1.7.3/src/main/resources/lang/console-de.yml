@@ -1,0 +1,33 @@
+# PayDay deutsche Konsolenmeldungen.
+prefix: '[PayDay]'
+type:
+  day: Tag
+  noon: Mittag
+  night: Nacht
+  dawn: Morgendämmerung
+  dusk: Abenddämmerung
+  clear: Klares Wetter
+  rain: Regen
+  storm: Gewitter
+message:
+  no_console: '&cDieser Befehl kann nur von einem Spieler ausgeführt werden!'
+  no_permission: '&cDu hast keine Berechtigung für diesen Befehl!'
+  not_enough_money: '&cDu hast nicht genug Geld. Benötigt: &6{cost}'
+  current_balance: '&cAktuelles Guthaben: &6{balance}'
+  payday_success: '&a&6{cost}&a bezahlt. Zeit auf Tag gesetzt.'
+  purchase_balance: '&aVerbleibendes Guthaben: &6{balance}'
+  payweather_success: '&a&6{cost}&a bezahlt. Wetter auf klar gesetzt.'
+  reload: '&aPayDay-Konfiguration, Sprache und SQLite-Verlauf vollständig neu geladen.'
+  usage_admin: '&cVerwendung: /paydayadmin reload'
+log:
+  enabled: PayDay v{version} aktiviert.
+  disabled: PayDay deaktiviert.
+  economy_missing: iConomy wurde nicht gefunden. PayDay wurde deaktiviert.
+  database_missing: SQLite JDBC ist nicht verfügbar. PayDay wurde deaktiviert.
+  price: 'Preis für {type}: {cost}'
+  payday_purchase: '{player} hat {cost} bezahlt und die Zeit auf Tag gesetzt.'
+  payweather_purchase: '{player} hat {cost} bezahlt und das Wetter auf klar gesetzt.'
+  reload: '{player} hat die PayDay-Konfiguration neu geladen.'
+  payment_failed: 'Zahlung von {player} über {cost} fehlgeschlagen.'
+  time_purchase: '{player} hat {cost} bezahlt und die Zeit auf {action} gesetzt.'
+  weather_purchase: '{player} hat {cost} bezahlt und das Wetter auf {action} gesetzt.'

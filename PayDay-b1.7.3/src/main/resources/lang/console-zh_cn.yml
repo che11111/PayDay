@@ -1,0 +1,33 @@
+# PayDay 简体中文控制台消息。
+prefix: '[PayDay]'
+type:
+  day: 白天
+  noon: 正午
+  night: 夜晚
+  dawn: 黎明
+  dusk: 落日
+  clear: 晴天
+  rain: 雨天
+  storm: 雷暴天气
+message:
+  no_console: '&c此命令只能由玩家执行。'
+  no_permission: '&c你没有权限使用此命令。'
+  not_enough_money: '&c你的金币不足，需要 &6{cost}'
+  current_balance: '&c当前余额：&6{balance}'
+  payday_success: '&a已支付 &6{cost}&a，时间已设置为白天。'
+  purchase_balance: '&a剩余金币：&6{balance}'
+  payweather_success: '&a已支付 &6{cost}&a，天气已设置为晴天。'
+  reload: '&aPayDay 配置、语言和 SQLite 历史已完整重载。'
+  usage_admin: '&c用法：/paydayadmin reload'
+log:
+  enabled: PayDay v{version} 已启用。
+  disabled: PayDay 已禁用。
+  economy_missing: 未检测到 iConomy，PayDay 已禁用。
+  database_missing: SQLite JDBC 不可用，PayDay 已禁用。
+  price: '{type} 价格：{cost}'
+  payday_purchase: '{player} 支付 {cost} 将时间设置为白天。'
+  payweather_purchase: '{player} 支付 {cost} 将天气设置为晴天。'
+  reload: '{player} 重新加载了 PayDay 配置。'
+  payment_failed: '{player} 支付 {cost} 失败。'
+  time_purchase: '{player} 支付 {cost} 将时间设置为 {action}。'
+  weather_purchase: '{player} 支付 {cost} 将天气设置为 {action}。'

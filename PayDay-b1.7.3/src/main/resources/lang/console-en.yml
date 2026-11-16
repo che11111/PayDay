@@ -1,0 +1,33 @@
+# PayDay English console messages.
+prefix: '[PayDay]'
+type:
+  day: Day
+  noon: Noon
+  night: Night
+  dawn: Dawn
+  dusk: Dusk
+  clear: Clear Weather
+  rain: Rain
+  storm: Thunderstorm
+message:
+  no_console: '&cThis command can only be executed by a player!'
+  no_permission: '&cYou don''t have permission to use this command!'
+  not_enough_money: '&cYou don''t have enough money! Need &6{cost}'
+  current_balance: '&cCurrent balance: &6{balance}'
+  payday_success: '&aYou paid &6{cost} &aand set the time to day!'
+  purchase_balance: '&aRemaining balance: &6{balance}'
+  payweather_success: '&aYou paid &6{cost} &aand set the weather to clear!'
+  reload: '&aPayDay configuration, language and SQLite history reloaded!'
+  usage_admin: '&cUsage: /paydayadmin reload'
+log:
+  enabled: PayDay v{version} enabled.
+  disabled: PayDay disabled.
+  economy_missing: iConomy not found! PayDay disabled.
+  database_missing: SQLite JDBC is unavailable! PayDay disabled.
+  price: '{type} price: {cost}'
+  payday_purchase: '{player} paid {cost} to set the time to day.'
+  payweather_purchase: '{player} paid {cost} to set the weather to clear.'
+  reload: '{player} reloaded the PayDay configuration.'
+  payment_failed: 'Payment of {cost} by {player} failed.'
+  time_purchase: '{player} paid {cost} to set the time to {action}.'
+  weather_purchase: '{player} paid {cost} to set the weather to {action}.'

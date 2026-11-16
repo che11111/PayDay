@@ -1,0 +1,54 @@
+# PayDay configuration / PayDay 配置文件
+#
+# Commands / 可用指令:
+#   /payday              Day / 白天
+#   /paynoon             Noon / 正午
+#   /paynight            Night / 夜晚
+#   /paydawn             Dawn / 黎明
+#   /paydusk             Dusk / 落日
+#   /payweather          Clear weather / 晴天
+#   /payrain             Rain / 雨天
+#   /paystorm            Thunderstorm / 雷暴
+#   /paydayadmin reload  Full reload / 完整重载
+
+language:
+  # Console language: auto or a complete .yml filename under lang/. /
+  # 控制台语言：auto，或 lang/ 下的完整 .yml 文件名。
+  # Built in / 内置: console-en.yml, console-zh_cn.yml, console-ja.yml,
+  #                  console-ko.yml, console-zh_tw.yml, console-de.yml,
+  #                  console-fr.yml, console-es.yml, console-ru.yml
+  # auto follows the server JVM language and country. /
+  # auto 根据服务器 JVM 语言和地区自动选择。
+  # Example / 示例: console: console-zh_cn.yml
+  console: auto
+  # In-game message file. This value is fixed to game.yml. /
+  # 玩家游戏内消息文件固定为 game.yml。
+  # Beta 1.7.3 clients can only display English. /
+  # Beta 1.7.3 客户端只能显示英文，game.yml 保持 ASCII 英文。
+  game: game.yml
+
+# Purchase prices / 购买价格
+costs:
+  # Time purchases / 时间购买
+  time:
+    day: 30     # Day / 白天
+    noon: 30    # Noon / 正午
+    night: 30   # Night / 夜晚
+    dawn: 30    # Dawn / 黎明
+    dusk: 30    # Dusk / 落日
+  # Weather purchases / 天气购买
+  weather:
+    clear: 30   # Clear / 晴天
+    rain: 30    # Rain / 雨天
+    storm: 30   # Thunderstorm / 雷暴
+
+# In-game time values / 游戏内时间值 (ticks)
+times:
+  day: 1000    # Day / 白天
+  noon: 6000   # Noon / 正午
+  night: 18000 # Night / 夜晚
+  dawn: 0      # Dawn / 黎明
+  dusk: 12000  # Dusk / 落日
+
+# Rain and thunder duration / 雨天和雷暴持续时间 (ticks)
+weather_duration: 12000

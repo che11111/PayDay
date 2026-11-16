@@ -1,0 +1,68 @@
+name: PayDay
+main: dev.che1s.payday.PayDayPlugin
+version: 1.0.0
+description: Pay to set time and weather
+author: che1s
+depend: [iConomy]
+
+commands:
+  payday:
+    description: Pay to set time to day
+    usage: /<command>
+  paynoon:
+    description: Pay to set time to noon
+    usage: /<command>
+  paynight:
+    description: Pay to set time to night
+    usage: /<command>
+  paydawn:
+    description: Pay to set time to dawn
+    usage: /<command>
+  paydusk:
+    description: Pay to set time to dusk
+    usage: /<command>
+  payweather:
+    description: Pay to set weather to clear
+    usage: /<command>
+  payrain:
+    description: Pay to set weather to rain
+    usage: /<command>
+  paystorm:
+    description: Pay to set weather to thunderstorm
+    usage: /<command>
+  paydayadmin:
+    description: PayDay admin command
+    usage: /<command> reload
+
+permissions:
+  payday.use:
+    description: Allows using all purchases
+    default: true
+    children:
+      payday.day: true
+      payday.noon: true
+      payday.night: true
+      payday.dawn: true
+      payday.dusk: true
+      payday.weather: true
+  payday.day:
+    description: Allows using /payday
+    default: true
+  payday.noon:
+    description: Allows using /paynoon
+    default: true
+  payday.night:
+    description: Allows using /paynight
+    default: true
+  payday.dawn:
+    description: Allows using /paydawn
+    default: true
+  payday.dusk:
+    description: Allows using /paydusk
+    default: true
+  payday.weather:
+    description: Allows using /payweather, /payrain and /paystorm
+    default: true
+  payday.reload:
+    description: Allows using /paydayadmin reload
+    default: op
