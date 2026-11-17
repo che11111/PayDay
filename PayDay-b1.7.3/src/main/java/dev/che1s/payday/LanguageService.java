@@ -4,6 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.util.config.Configuration;
+import org.bukkit.util.config.ConfigurationNode;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -50,8 +51,10 @@ final class LanguageService {
 
         ConsoleSelection selection = consoleSelection();
         consoleLanguage = selection.language;
-        String gameFile = plugin.getConfiguration()
-                .getString("language.game", "game.yml");
+        ConfigurationNode languageNode = plugin.getConfiguration().getNode("language");
+        String gameFile = languageNode == null
+                ? "game.yml"
+                : languageNode.getString("game", "game.yml");
         if (gameFile == null || !"game.yml".equalsIgnoreCase(gameFile.trim())) {
             plugin.getServer().getLogger().warning(
                     "Beta 1.7.3 in-game language is fixed to game.yml.");
@@ -114,8 +117,10 @@ final class LanguageService {
     }
 
     private ConsoleSelection consoleSelection() {
-        String configured = plugin.getConfiguration()
-                .getString("language.console", null);
+        ConfigurationNode languageNode = plugin.getConfiguration().getNode("language");
+        String configured = languageNode == null
+                ? null
+                : languageNode.getString("console", null);
         if (configured == null || configured.trim().isEmpty()) {
             configured = plugin.getConfiguration().getString("language", "auto");
         }

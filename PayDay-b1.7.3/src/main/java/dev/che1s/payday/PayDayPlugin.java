@@ -61,7 +61,8 @@ public class PayDayPlugin extends JavaPlugin {
         language.load();
 
         // ========== Check iConomy ==========
-        if (getServer().getPluginManager().getPlugin("iConomy") == null) {
+        if (getServer().getPluginManager().getPlugin("iConomy") == null
+                || !getServer().getPluginManager().getPlugin("iConomy").isEnabled()) {
             language.severe("log.economy_missing", "iConomy not found! Plugin disabled.");
             getServer().getPluginManager().disablePlugin(this);
             return;

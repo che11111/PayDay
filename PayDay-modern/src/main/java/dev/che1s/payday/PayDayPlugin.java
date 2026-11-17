@@ -1,5 +1,10 @@
 package dev.che1s.payday;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -39,8 +44,8 @@ public class PayDayPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        log = getLogger();
-        saveDefaultConfig();
+        log = getServer().getLogger();
+        ensureDefaultConfig();
         language = new LanguageManager(this);
 
         if (!setupEconomy()) {
@@ -125,6 +130,27 @@ public class PayDayPlugin extends JavaPlugin {
     }
 
     // ==================== Config ====================
+
+    private void ensureDefaultConfig() {
+        File configFile = new File(getDataFolder(), "config.yml");
+        if (configFile.isFile()) {
+            return;
+        }
+        getDataFolder().mkdirs();
+        try (InputStream input = getResource("config.yml");
+             OutputStream output = new FileOutputStream(configFile)) {
+            if (input == null) {
+                throw new IOException("Bundled config.yml is missing");
+            }
+            byte[] buffer = new byte[8192];
+            int read;
+            while ((read = input.read(buffer)) >= 0) {
+                output.write(buffer, 0, read);
+            }
+        } catch (IOException exception) {
+            log.warning("Could not save default config: " + exception.getMessage());
+        }
+    }
 
     private void startMetrics() {
         try {

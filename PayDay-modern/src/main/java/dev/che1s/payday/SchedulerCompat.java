@@ -21,7 +21,8 @@ final class SchedulerCompat {
             try {
                 FOLIA_RUN.invoke(null, plugin, player, task);
             } catch (IllegalAccessException | InvocationTargetException exception) {
-                plugin.getLogger().severe("Could not schedule a Folia player task: "
+                plugin.getServer().getLogger().severe(
+                        "Could not schedule a Folia player task: "
                         + exception.getMessage());
             }
             return;
